@@ -12,6 +12,29 @@ Verifies argument types.
 
 Run `npm install --save smockle/safe` to add `safe` to your project.
 
+## Usage
+
+```
+const safe = require('./lib/safe')
+
+const toUpperAndNotEmpty = safe([
+  { name: 'xs', type: 'object' },
+  { name: 'x', type: 'string' }
+])(
+  function (xs, x) {
+    return xs.concat(x ? x.toUpperCase() : [])
+  }
+)
+
+const a = [ 'aaa', 222, '', 'ccc', '' ]
+a.reduce(toUpperAndNotEmpty, [])
+// Throws TypeError('x must be a string')
+
+const b = [ 'aaa', 'bbb', '', 'ccc', '' ]
+b.reduce(toUpperAndNotEmpty, [])
+// [ 'AAA', 'BBB', 'CCC' ]
+```
+
 ## API Reference
 <a name="module_safe.._safe"></a>
 
