@@ -14,7 +14,7 @@ Run `npm install --save smockle/safe` to add `safe` to your project.
 
 ## Usage
 
-```
+```JavaScript
 const safe = require('./lib/safe')
 
 const toUpperAndNotEmpty = safe([
