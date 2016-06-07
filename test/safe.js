@@ -1,6 +1,6 @@
 // @flow
 const test = require('tape')
-const { safe } = require('../lib/safe')
+const safe = require('../lib/safe').safe
 
 test('safe.safe (primitive type)', (t) => {
   t.plan(2)
