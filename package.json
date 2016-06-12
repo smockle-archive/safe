@@ -4,7 +4,7 @@
   "description": "Verifies argument types.",
   "main": "index.js",
   "scripts": {
-    "docs": "jsdoc2md lib/**/*.js --template jsdoc2md/README.hbs > README.md",
+    "docs": "jsdoc2md lib/**/*.js --template jsdoc2md/README.hbs --example-lang JavaScript > README.md",
     "test": "tape test/**/*.js",
     "coverage": "istanbul cover tape test/**/*.js"
   },
