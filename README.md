@@ -36,13 +36,65 @@ b.reduce(toUpperAndNotEmpty, [])
 ```
 
 ## API Reference
-<a name="module_safe.._safe"></a>
 
-### safe~_safe(types, cb, args) ⇒ <code>function</code> &#124; <code>any</code>
+* [safe](#module_safe)
+    * [.IDENTITY](#module_safe.IDENTITY) : <code>Object.&lt;string, string&gt;</code>
+    * [.identifyTypeClass(type)](#module_safe.identifyTypeClass) ⇒ <code>string</code> &#124; <code>null</code>
+    * [.isSafe(type, value)](#module_safe.isSafe) ⇒ <code>Boolean</code>
+    * [.safe(types, value)](#module_safe.safe) ⇒ <code>TypeError</code>
+    * [.wrapper(types, cb, args)](#module_safe.wrapper) ⇒ <code>function</code> &#124; <code>\*</code>
+
+<a name="module_safe.IDENTITY"></a>
+
+### safe.IDENTITY : <code>Object.&lt;string, string&gt;</code>
+Dictionary of type classes.
+
+**Kind**: static constant of <code>[safe](#module_safe)</code>  
+<a name="module_safe.identifyTypeClass"></a>
+
+### safe.identifyTypeClass(type) ⇒ <code>string</code> &#124; <code>null</code>
+Select type class matching the provided parameter.
+
+**Kind**: static method of <code>[safe](#module_safe)</code>  
+**Returns**: <code>string</code> &#124; <code>null</code> - Type class.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| type | <code>string</code> | String representation of a primitive or instantiable type. |
+
+<a name="module_safe.isSafe"></a>
+
+### safe.isSafe(type, value) ⇒ <code>Boolean</code>
+Whether value is of provided type.
+
+**Kind**: static method of <code>[safe](#module_safe)</code>  
+**Returns**: <code>Boolean</code> - Value is of provided type.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| type | <code>string</code> | String representation of a primitive or instantiable type. |
+| value | <code>\*</code> | Value to check. |
+
+<a name="module_safe.safe"></a>
+
+### safe.safe(types, value) ⇒ <code>TypeError</code>
+Create TypeError when an argument doesn’t match provided type.
+
+**Kind**: static method of <code>[safe](#module_safe)</code>  
+**Returns**: <code>TypeError</code> - Argument doesn’t match provided type.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| types | <code>Array.&lt;Object.&lt;string, string&gt;&gt;</code> | List of parameter names and types. |
+| value | <code>\*</code> | List of values to check. |
+
+<a name="module_safe.wrapper"></a>
+
+### safe.wrapper(types, cb, args) ⇒ <code>function</code> &#124; <code>\*</code>
 Verifies argument types
 
-**Kind**: inner method of <code>[safe](#module_safe)</code>  
-**Returns**: <code>function</code> &#124; <code>any</code> - Return partially-applied callback or result  
+**Kind**: static method of <code>[safe](#module_safe)</code>  
+**Returns**: <code>function</code> &#124; <code>\*</code> - Return partially-applied callback or result  
 **Throws**:
 
 - <code>TypeError</code> Argument has invalid type
@@ -53,6 +105,96 @@ Verifies argument types
 | types | <code>Array</code> | Names and types of each argument |
 | cb | <code>function</code> | Callback function |
 | args | <code>Array</code> | Arguments to callback function |
+
+
+
+* [type](#module_type)
+    * [.types](#module_type.types) : <code>Object.&lt;string, string&gt;</code>
+    * [.typeKeys](#module_type.typeKeys) : <code>Array.&lt;string&gt;</code>
+    * [.isType(type)](#module_type.isType) ⇒ <code>Boolean</code>
+    * [.typeOf(type, value)](#module_type.typeOf) ⇒ <code>Boolean</code>
+
+<a name="module_type.types"></a>
+
+### type.types : <code>Object.&lt;string, string&gt;</code>
+Dictionary of type names to primitive types.
+
+**Kind**: static constant of <code>[type](#module_type)</code>  
+<a name="module_type.typeKeys"></a>
+
+### type.typeKeys : <code>Array.&lt;string&gt;</code>
+List of primitive types.
+
+**Kind**: static constant of <code>[type](#module_type)</code>  
+<a name="module_type.isType"></a>
+
+### type.isType(type) ⇒ <code>Boolean</code>
+Whether parameter represents a primitive type.
+
+**Kind**: static method of <code>[type](#module_type)</code>  
+**Returns**: <code>Boolean</code> - Parameter represents a primitive type.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| type | <code>string</code> | String representation of a primitive type. |
+
+<a name="module_type.typeOf"></a>
+
+### type.typeOf(type, value) ⇒ <code>Boolean</code>
+Whether value is of provided primitive type.
+
+**Kind**: static method of <code>[type](#module_type)</code>  
+**Returns**: <code>Boolean</code> - Value is of provided primitive type.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| type | <code>string</code> | String representation of a primitive type. |
+| value | <code>\*</code> | Value to check. |
+
+
+
+* [instantiable](#module_instantiable)
+    * [.instantiables](#module_instantiable.instantiables) : <code>Object.&lt;string, (function()\|Object\|number)&gt;</code>
+    * [.instantiableKeys](#module_instantiable.instantiableKeys) : <code>Array.&lt;string&gt;</code>
+    * [.isInstantiable(type)](#module_instantiable.isInstantiable) ⇒ <code>Boolean</code>
+    * [.instanceOf(type, value)](#module_instantiable.instanceOf) ⇒ <code>Boolean</code>
+
+<a name="module_instantiable.instantiables"></a>
+
+### instantiable.instantiables : <code>Object.&lt;string, (function()\|Object\|number)&gt;</code>
+Dictionary of instantiable names to instantiable types.
+
+**Kind**: static constant of <code>[instantiable](#module_instantiable)</code>  
+<a name="module_instantiable.instantiableKeys"></a>
+
+### instantiable.instantiableKeys : <code>Array.&lt;string&gt;</code>
+List of instantiable types.
+
+**Kind**: static constant of <code>[instantiable](#module_instantiable)</code>  
+<a name="module_instantiable.isInstantiable"></a>
+
+### instantiable.isInstantiable(type) ⇒ <code>Boolean</code>
+Whether parameter represents an instantiable type.
+
+**Kind**: static method of <code>[instantiable](#module_instantiable)</code>  
+**Returns**: <code>Boolean</code> - Parameter represents an instantiable type.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| type | <code>string</code> | String representation of an instantiable type. |
+
+<a name="module_instantiable.instanceOf"></a>
+
+### instantiable.instanceOf(type, value) ⇒ <code>Boolean</code>
+Whether value is of provided instantiable type.
+
+**Kind**: static method of <code>[instantiable](#module_instantiable)</code>  
+**Returns**: <code>Boolean</code> - Value is of provided instantiable type.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| type | <code>string</code> | String representation of a instantiable type. |
+| value | <code>\*</code> | Value to check. |
 
 
 ## Testing
