@@ -14,11 +14,36 @@ Run `npm install --save smockle/safe` to add `safe` to your project.
 
 ## Usage
 
+`safe` can be called within a function to verify argument types:
+
 ```JavaScript
-const safe = require('./lib/safe')
+const safe = require('./lib/safe').safe
+
+function toUpperAndNotEmpty (xs, x) {
+  const unsafe = safe([
+    { name: 'xs', type: 'array' },
+    { name: 'x', type: 'string' }
+  ], arguments)
+  if (unsafe) throw unsafe
+  return xs.concat(x ? x.toUpperCase() : [])
+}
+
+const a = [ 'aaa', 222, '', 'ccc', '' ]
+a.reduce(toUpperAndNotEmpty, [])
+// Throws TypeError('x must be a string')
+
+const b = [ 'aaa', 'bbb', '', 'ccc', '' ]
+b.reduce(toUpperAndNotEmpty, [])
+// [ 'AAA', 'BBB', 'CCC' ]
+```
+
+`safe` also includes a wrapper that accepts functions as a callback:
+
+```JavaScript
+const safe = require('./lib/wrapper').safe
 
 const toUpperAndNotEmpty = safe([
-  { name: 'xs', type: 'object' },
+  { name: 'xs', type: 'array' },
   { name: 'x', type: 'string' }
 ])(
   function (xs, x) {
