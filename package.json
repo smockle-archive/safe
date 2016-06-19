@@ -32,5 +32,8 @@
     "jsdoc-to-markdown": "^1.3.6",
     "tape": "^4.5.1"
   },
-  "dependencies": {}
+  "snyk": true,
+  "dependencies": {
+    "snyk": "^1.14.3"
+  }
 }
