@@ -1,5 +1,5 @@
 {
-  "name": "safe",
+  "name": "@smockle/safe",
   "version": "1.0.0",
   "description": "Verifies argument types.",
   "main": "index.js",

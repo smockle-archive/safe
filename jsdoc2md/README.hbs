@@ -10,7 +10,7 @@ Verifies argument types.
 
 ## Installation
 
-Run `npm install --save smockle/safe` to add `safe` to your project.
+Run `npm install --save @smockle/safe` to add `safe` to your project.
 
 ## Usage
 
