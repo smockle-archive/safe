@@ -9,7 +9,7 @@
     "coverage": "istanbul cover tape test/**/*.js",
     "snyk-protect": "snyk protect",
     "prepublish": "npm run snyk-protect",
-    "postpublish": "greenkeeper-postpublish"g
+    "postpublish": "greenkeeper-postpublish"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/smockle/safe#readme",
   "devDependencies": {
-    "babel-eslint": "^6.1.0",
     "codeclimate-test-reporter": "^0.3.1",
     "coveralls": "^2.11.9",
     "eslint": "^3.0.0",
