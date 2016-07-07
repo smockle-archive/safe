@@ -4,8 +4,8 @@
   "description": "Verifies argument types.",
   "main": "index.js",
   "scripts": {
-    "docs": "jsdoc2md lib/**/*.js --template jsdoc2md/README.hbs --example-lang JavaScript > README.md",
-    "test": "tape test/**/*.js && snyk test",
+    "docs": "jsdoc2md \"lib/**/*.js\" --template jsdoc2md/README.hbs --example-lang JavaScript > README.md",
+    "test": "tape \"test/**/*.js\" && snyk test",
     "coverage": "istanbul cover tape test/**/*.js",
     "snyk-protect": "snyk protect",
     "prepublish": "npm run snyk-protect"
