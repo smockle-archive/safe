@@ -5,10 +5,9 @@
 [![Test Coverage](https://codeclimate.com/github/smockle/safe/badges/coverage.svg)](https://codeclimate.com/github/smockle/safe/coverage)
 [![Coverage Status](https://coveralls.io/repos/github/smockle/safe/badge.svg?branch=master)](https://coveralls.io/github/smockle/safe?branch=master)
 [![Known Vulnerabilities](https://snyk.io/test/npm/@smockle/safe/badge.svg)](https://snyk.io/test/npm/@smockle/safe)
+[![Greenkeeper badge](https://badges.greenkeeper.io/smockle/safe.svg)](https://greenkeeper.io/)
 
 # safe
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/smockle/safe.svg)](https://greenkeeper.io/)
 
 Verifies argument types.
 
