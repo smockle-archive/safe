@@ -8,6 +8,8 @@
 
 # safe
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/smockle/safe.svg)](https://greenkeeper.io/)
+
 Verifies argument types.
 
 ## Installation
