@@ -1,8 +1,6 @@
 [![npm](https://img.shields.io/npm/v/@smockle/safe.svg)](https://www.npmjs.com/package/@smockle/safe)
 [![Build Status](https://travis-ci.org/smockle/safe.svg?branch=master)](https://travis-ci.org/smockle/safe)
 [![Build status](https://ci.appveyor.com/api/projects/status/x1sjhd5q1jv1eupd?svg=true)](https://ci.appveyor.com/project/smockle/safe)
-[![Code Climate](https://codeclimate.com/github/smockle/safe/badges/gpa.svg)](https://codeclimate.com/github/smockle/safe)
-[![Test Coverage](https://codeclimate.com/github/smockle/safe/badges/coverage.svg)](https://codeclimate.com/github/smockle/safe/coverage)
 [![Coverage Status](https://coveralls.io/repos/github/smockle/safe/badge.svg?branch=master)](https://coveralls.io/github/smockle/safe?branch=master)
 [![Known Vulnerabilities](https://snyk.io/test/npm/@smockle/safe/badge.svg)](https://snyk.io/test/npm/@smockle/safe)
 [![Greenkeeper badge](https://badges.greenkeeper.io/smockle/safe.svg)](https://greenkeeper.io/)
@@ -67,24 +65,24 @@ b.reduce(toUpperAndNotEmpty, [])
 
 * [safe](#module_safe)
     * [.IDENTITY](#module_safe.IDENTITY) : <code>Object.&lt;string, string&gt;</code>
-    * [.identifyTypeClass(type)](#module_safe.identifyTypeClass) ⇒ <code>string</code> &#124; <code>null</code>
+    * [.identifyTypeClass(type)](#module_safe.identifyTypeClass) ⇒ <code>string</code> \| <code>null</code>
     * [.isSafe(type, value)](#module_safe.isSafe) ⇒ <code>Boolean</code>
     * [.safe(types, value)](#module_safe.safe) ⇒ <code>TypeError</code>
-    * [.wrapper(types, cb, args)](#module_safe.wrapper) ⇒ <code>function</code> &#124; <code>\*</code>
+    * [.wrapper(types, cb, args)](#module_safe.wrapper) ⇒ <code>function</code> \| <code>\*</code>
 
 <a name="module_safe.IDENTITY"></a>
 
 ### safe.IDENTITY : <code>Object.&lt;string, string&gt;</code>
 Dictionary of type classes.
 
-**Kind**: static constant of <code>[safe](#module_safe)</code>  
+**Kind**: static constant of [<code>safe</code>](#module_safe)  
 <a name="module_safe.identifyTypeClass"></a>
 
-### safe.identifyTypeClass(type) ⇒ <code>string</code> &#124; <code>null</code>
+### safe.identifyTypeClass(type) ⇒ <code>string</code> \| <code>null</code>
 Select type class matching the provided parameter.
 
-**Kind**: static method of <code>[safe](#module_safe)</code>  
-**Returns**: <code>string</code> &#124; <code>null</code> - Type class.  
+**Kind**: static method of [<code>safe</code>](#module_safe)  
+**Returns**: <code>string</code> \| <code>null</code> - Type class.  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -95,7 +93,7 @@ Select type class matching the provided parameter.
 ### safe.isSafe(type, value) ⇒ <code>Boolean</code>
 Whether value is of provided type.
 
-**Kind**: static method of <code>[safe](#module_safe)</code>  
+**Kind**: static method of [<code>safe</code>](#module_safe)  
 **Returns**: <code>Boolean</code> - Value is of provided type.  
 
 | Param | Type | Description |
@@ -108,7 +106,7 @@ Whether value is of provided type.
 ### safe.safe(types, value) ⇒ <code>TypeError</code>
 Create TypeError when an argument doesn’t match provided type.
 
-**Kind**: static method of <code>[safe](#module_safe)</code>  
+**Kind**: static method of [<code>safe</code>](#module_safe)  
 **Returns**: <code>TypeError</code> - Argument doesn’t match provided type.  
 
 | Param | Type | Description |
@@ -118,11 +116,11 @@ Create TypeError when an argument doesn’t match provided type.
 
 <a name="module_safe.wrapper"></a>
 
-### safe.wrapper(types, cb, args) ⇒ <code>function</code> &#124; <code>\*</code>
+### safe.wrapper(types, cb, args) ⇒ <code>function</code> \| <code>\*</code>
 Verifies argument types
 
-**Kind**: static method of <code>[safe](#module_safe)</code>  
-**Returns**: <code>function</code> &#124; <code>\*</code> - Return partially-applied callback or result  
+**Kind**: static method of [<code>safe</code>](#module_safe)  
+**Returns**: <code>function</code> \| <code>\*</code> - Return partially-applied callback or result  
 **Throws**:
 
 - <code>TypeError</code> Argument has invalid type
@@ -147,19 +145,19 @@ Verifies argument types
 ### type.types : <code>Object.&lt;string, string&gt;</code>
 Dictionary of type names to primitive types.
 
-**Kind**: static constant of <code>[type](#module_type)</code>  
+**Kind**: static constant of [<code>type</code>](#module_type)  
 <a name="module_type.typeKeys"></a>
 
 ### type.typeKeys : <code>Array.&lt;string&gt;</code>
 List of primitive types.
 
-**Kind**: static constant of <code>[type](#module_type)</code>  
+**Kind**: static constant of [<code>type</code>](#module_type)  
 <a name="module_type.isType"></a>
 
 ### type.isType(type) ⇒ <code>Boolean</code>
 Whether parameter represents a primitive type.
 
-**Kind**: static method of <code>[type](#module_type)</code>  
+**Kind**: static method of [<code>type</code>](#module_type)  
 **Returns**: <code>Boolean</code> - Parameter represents a primitive type.  
 
 | Param | Type | Description |
@@ -171,7 +169,7 @@ Whether parameter represents a primitive type.
 ### type.typeOf(type, value) ⇒ <code>Boolean</code>
 Whether value is of provided primitive type.
 
-**Kind**: static method of <code>[type](#module_type)</code>  
+**Kind**: static method of [<code>type</code>](#module_type)  
 **Returns**: <code>Boolean</code> - Value is of provided primitive type.  
 
 | Param | Type | Description |
@@ -192,19 +190,19 @@ Whether value is of provided primitive type.
 ### instantiable.instantiables : <code>Object.&lt;string, (function()\|Object\|number)&gt;</code>
 Dictionary of instantiable names to instantiable types.
 
-**Kind**: static constant of <code>[instantiable](#module_instantiable)</code>  
+**Kind**: static constant of [<code>instantiable</code>](#module_instantiable)  
 <a name="module_instantiable.instantiableKeys"></a>
 
 ### instantiable.instantiableKeys : <code>Array.&lt;string&gt;</code>
 List of instantiable types.
 
-**Kind**: static constant of <code>[instantiable](#module_instantiable)</code>  
+**Kind**: static constant of [<code>instantiable</code>](#module_instantiable)  
 <a name="module_instantiable.isInstantiable"></a>
 
 ### instantiable.isInstantiable(type) ⇒ <code>Boolean</code>
 Whether parameter represents an instantiable type.
 
-**Kind**: static method of <code>[instantiable](#module_instantiable)</code>  
+**Kind**: static method of [<code>instantiable</code>](#module_instantiable)  
 **Returns**: <code>Boolean</code> - Parameter represents an instantiable type.  
 
 | Param | Type | Description |
@@ -216,7 +214,7 @@ Whether parameter represents an instantiable type.
 ### instantiable.instanceOf(type, value) ⇒ <code>Boolean</code>
 Whether value is of provided instantiable type.
 
-**Kind**: static method of <code>[instantiable](#module_instantiable)</code>  
+**Kind**: static method of [<code>instantiable</code>](#module_instantiable)  
 **Returns**: <code>Boolean</code> - Value is of provided instantiable type.  
 
 | Param | Type | Description |
