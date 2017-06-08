@@ -3,7 +3,7 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/x1sjhd5q1jv1eupd?svg=true)](https://ci.appveyor.com/project/smockle/safe)
 [![Code Climate](https://codeclimate.com/github/smockle/safe/badges/gpa.svg)](https://codeclimate.com/github/smockle/safe)
 [![Test Coverage](https://codeclimate.com/github/smockle/safe/badges/coverage.svg)](https://codeclimate.com/github/smockle/safe/coverage)
-[![Known Vulnerabilities](https://snyk.io/test/npm/@smockle/safe/badge.svg)](https://snyk.io/test/npm/@smockle/safe)
+[![Known Vulnerabilities](https://snyk.io/test/github/smockle/safe/badge.svg)](https://snyk.io/test/github/smockle/safe)
 [![Greenkeeper badge](https://badges.greenkeeper.io/smockle/safe.svg)](https://greenkeeper.io/)
 
 # safe
