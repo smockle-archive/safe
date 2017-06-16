@@ -1,11 +1,11 @@
+# safe
+
 [![npm](https://img.shields.io/npm/v/@smockle/safe.svg)](https://www.npmjs.com/package/@smockle/safe)
 [![Build Status](https://travis-ci.org/smockle/safe.svg?branch=master)](https://travis-ci.org/smockle/safe)
 [![Build status](https://ci.appveyor.com/api/projects/status/x1sjhd5q1jv1eupd?svg=true)](https://ci.appveyor.com/project/smockle/safe)
 [![codecov](https://codecov.io/gh/smockle/safe/branch/master/graph/badge.svg)](https://codecov.io/gh/smockle/safe)
 [![Known Vulnerabilities](https://snyk.io/test/github/smockle/safe/badge.svg)](https://snyk.io/test/github/smockle/safe)
 [![Greenkeeper badge](https://badges.greenkeeper.io/smockle/safe.svg)](https://greenkeeper.io/)
-
-# safe
 
 Verifies argument types.
 
