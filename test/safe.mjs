@@ -1,6 +1,6 @@
 // @flow
-const test = require('tape')
-const safe = require('../lib/safe').safe
+import { safe } from '../lib/safe'
+import test from 'tape'
 
 test('safe.safe (primitive type)', t => {
   t.plan(2)

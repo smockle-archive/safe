@@ -4,9 +4,9 @@
   "description": "Verifies argument types.",
   "main": "lib/safe.js",
   "scripts": {
-    "docs": "jsdoc2md \"lib/**/*.js\" --template jsdoc2md/README.hbs --example-lang JavaScript > README.md",
-    "test": "tape \"test/**/*.js\" | colortape",
-    "coverage": "nyc --reporter=lcov tape \"test/**/*.js\" | colortape",
+    "docs": "jsdoc2md \"lib/**/*.mjs\" --configure jsdoc.json --template jsdoc2md/README.hbs --example-lang JavaScript > README.md",
+    "test": "node -r @std/esm test/index.mjs | colortape",
+    "coverage": "nyc --require @std/esm --extension .mjs --reporter=lcov node test/index.mjs | colortape",
     "postcoverage": "nyc report",
     "prepublish": "npm test",
     "precommit": "lint-staged"
@@ -30,6 +30,8 @@
     "eslint-plugin-node": "^5.0.0",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.0",
+    "flow-bin": "^0.53.1",
+    "flow-typed": "^2.1.5",
     "husky": "^0.14.0",
     "jsdoc-to-markdown": "^3.0.0",
     "lint-staged": "^4.0.0",
@@ -38,9 +40,15 @@
     "tape": "^4.5.1"
   },
   "lint-staged": {
-    "*.js": [
+    "*.{js,mjs}": [
       "./node_modules/.bin/prettier-eslint --write",
       "git add"
     ]
+  },
+  "@std/esm": {
+    "cjs": true
+  },
+  "dependencies": {
+    "@std/esm": "^0.5.1"
   }
 }
