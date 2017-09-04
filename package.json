@@ -4,9 +4,12 @@
   "description": "Verifies argument types.",
   "main": "lib/safe.js",
   "scripts": {
-    "docs": "jsdoc2md \"lib/**/*.mjs\" --configure jsdoc.json --template jsdoc2md/README.hbs --example-lang JavaScript > README.md",
+    "debug": "node --nolazy --inspect-brk=5858 -r @std/esm test/index.mjs",
+    "docs":
+      "jsdoc2md \"lib/**/*.mjs\" --configure jsdoc.json --template jsdoc2md/README.hbs --example-lang JavaScript > README.md",
     "test": "node -r @std/esm test/index.mjs | colortape",
-    "coverage": "nyc --require @std/esm --extension .mjs --reporter=lcov node test/index.mjs | colortape",
+    "coverage":
+      "nyc --require @std/esm --extension .mjs --reporter=lcov node test/index.mjs | colortape",
     "postcoverage": "nyc report",
     "prepublish": "npm test",
     "precommit": "lint-staged"
@@ -40,10 +43,7 @@
     "tape": "^4.5.1"
   },
   "lint-staged": {
-    "*.{js,mjs}": [
-      "./node_modules/.bin/prettier-eslint --write",
-      "git add"
-    ]
+    "*.{js,mjs}": ["./node_modules/.bin/prettier-eslint --write", "git add"]
   },
   "@std/esm": {
     "cjs": true
