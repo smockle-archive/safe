@@ -3,6 +3,7 @@
   "version": "3.0.0",
   "description": "Verifies argument types.",
   "main": "lib/safe.js",
+  "module": "lib/safe.mjs",
   "scripts": {
     "debug": "node --nolazy --inspect-brk=5858 -r @std/esm test/index.mjs",
     "docs": "jsdoc2md \"lib/**/*.mjs\" --configure jsdoc.json --template jsdoc2md/README.hbs --example-lang JavaScript > README.md",
