@@ -1,6 +1,6 @@
 {
   "name": "@smockle/safe",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Verifies argument types.",
   "main": "lib/safe.js",
   "module": "lib/safe.mjs",
